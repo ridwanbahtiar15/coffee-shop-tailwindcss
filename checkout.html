@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Archivo&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Rubik&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <script>
       tailwind.config = {
         theme: {
@@ -31,12 +35,12 @@
         <img src="assets/img/coffee-shop.webp" alt="logo" class="w-32 h-8" />
         <a
           href="#"
-          class="hover:border-b-2 hover:border-[#FF8906] focus:border-b-2 focus:border-[#FF8906]"
+          class="hover:border-b-2 hover:border-[#FF8906] focus:border-b-2 focus:border-[#FF8906] hidden md:block"
           >Home</a
         >
         <a
           href="#"
-          class="hover:border-b-2 hover:border-[#FF8906] focus:border-b-2 focus:border-[#FF8906]"
+          class="hover:border-b-2 hover:border-[#FF8906] focus:border-b-2 focus:border-[#FF8906] hidden md:block"
           >Product</a
         >
       </div>
@@ -99,14 +103,14 @@
             />
           </svg>
         </div>
-        <div class="icon-profile">
+        <div class="icon-profile hidden md:block">
           <img
             src="assets/img/profile.jpg"
             alt="icon-profile"
             class="rounded-full w-8 h-8"
           />
         </div>
-        <div class="icon-arrow-bottom">
+        <div id="dropdown-arrow" class="hidden md:block">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -123,7 +127,33 @@
             />
           </svg>
         </div>
+        <div
+          class="absolute top-20 right-32 bg-[#FFF] border border-[#E8E8E8] text-sm font-normal py-2 px-6 hidden"
+          id="dropdown-menu"
+        >
+          <ul class="flex flex-col gap-y-2">
+            <li class="p-1 hover:bg-[#FF8906]">Home</li>
+            <li class="p-1 hover:bg-[#FF8906]">Product</li>
+            <li class="p-1 hover:bg-[#FF8906]">History Order</li>
+            <li class="p-1 hover:bg-[#FF8906]">Logout</li>
+          </ul>
+        </div>
+        <div class="text-2xl md:hidden" id="hamburger-menu">
+          <i class="fa-solid fa-bars"></i>
+        </div>
       </div>
+    </nav>
+    <nav
+      id="dropdown-mobile"
+      class="w-full h-full font-plusJakartaSans py-4 px-5 border-b-[1px] border-b-[#E8E8E8] hidden md:hidden"
+    >
+      <ul class="flex flex-col gap-y-2">
+        <li class="p-1 hover:bg-[#FF8906] hover:font-medium">Profile</li>
+        <li class="p-1 hover:bg-[#FF8906] hover:font-medium">Home</li>
+        <li class="p-1 hover:bg-[#FF8906] hover:font-medium">Product</li>
+        <li class="p-1 hover:bg-[#FF8906] hover:font-medium">History Order</li>
+        <li class="p-1 hover:bg-[#FF8906] hover:font-medium">Logout</li>
+      </ul>
     </nav>
     <header
       class="font-plusJakartaSans py-10 px-5 md:px-24 lg:pt-20 lg:pb-16 lg:px-[130px]"
@@ -867,4 +897,18 @@
       </section>
     </footer>
   </body>
+  <script>
+    const dropdownBtn = document.getElementById("dropdown-arrow");
+    const dropdownMenu = document.getElementById("dropdown-menu");
+    dropdownBtn.addEventListener("click", (e) => {
+      dropdownMenu.classList.toggle("hidden");
+      // console.log("ok");
+    });
+
+    const hamburgerMenu = document.getElementById("hamburger-menu");
+    const dropdownMobile = document.getElementById("dropdown-mobile");
+    hamburgerMenu.addEventListener("click", (e) => {
+      dropdownMobile.classList.toggle("hidden");
+    });
+  </script>
 </html>
