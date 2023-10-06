@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            plusJakartaSans: ["Plus Jakarta Sans"],
+            rubik: ["Rubik"],
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <nav
+      class="w-full flex justify-between py-4 px-5 items-center bg-[#FFF] border-b-[1px] border-b-[#E8E8E8] sm:px-5 md:px-24 lg:px-[130px]"
+    >
+      <div class="nav-start">
+        <div class="logo w-32">
+          <img src="assets/img/coffee-shop.webp" alt="logo" />
+        </div>
+      </div>
+      <div class="nav-end flex gap-x-[22px] items-center">
+        <div class="icon-search hidden md:block">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="21"
+            height="21"
+            viewBox="0 0 21 21"
+            fill="none"
+          >
+            <circle
+              cx="9.76688"
+              cy="9.76663"
+              r="8.98856"
+              stroke="#4F5665"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M16.0186 16.4851L19.5426 20"
+              stroke="#4F5665"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div class="icon-cart hidden md:block">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M18 17.25H6.42139C6.24574 17.25 6.07567 17.1884 5.94082 17.0758C5.80597 16.9633 5.7149 16.807 5.68348 16.6342L3.18015 2.86584C3.14873 2.69303 3.05766 2.53673 2.92281 2.42419C2.78796 2.31164 2.61789 2.25 2.44225 2.25H0.75"
+              stroke="#4F5665"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M6.75 21C7.78553 21 8.625 20.1605 8.625 19.125C8.625 18.0895 7.78553 17.25 6.75 17.25C5.71447 17.25 4.875 18.0895 4.875 19.125C4.875 20.1605 5.71447 21 6.75 21Z"
+              stroke="#4F5665"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M18 21C19.0355 21 19.875 20.1605 19.875 19.125C19.875 18.0895 19.0355 17.25 18 17.25C16.9645 17.25 16.125 18.0895 16.125 19.125C16.125 20.1605 16.9645 21 18 21Z"
+              stroke="#4F5665"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M3.75 6H20.1013C20.2112 6 20.3197 6.02413 20.4192 6.07069C20.5187 6.11725 20.6068 6.1851 20.6772 6.26944C20.7475 6.35378 20.7986 6.45255 20.8266 6.55878C20.8546 6.665 20.8589 6.77608 20.8392 6.88416L19.612 13.6342C19.5806 13.807 19.4895 13.9633 19.3546 14.0758C19.2198 14.1884 19.0497 14.25 18.8741 14.25H5.25"
+              stroke="#4F5665"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div class="icon-profile w-8">
+          <img
+            src="assets/img/profile.jpg"
+            alt="icon-profile"
+            class="rounded-full"
+          />
+        </div>
+        <div class="icon-arrow-bottom">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M18.5 9L12.5 15L6.5 9"
+              stroke="#4F5665"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+    </nav>
+    <header class="py-10 px-5 sm:px-5 md:px-24 lg:px-[130px]">
+      <h1 class="font-plusJakartaSans text-2xl text-[#0B132A]">
+        Payment Details
+      </h1>
+    </header>
+    <main class="px-5 sm:px-5 md:px-24 lg:px-[130px]">
+      <section class="mb-8">
+        <div class="item-product">
+          <header class="flex justify-between items-center mb-4">
+            <span class="text-xl text-[#0B132A]">Your Order</span>
+            <a
+              href="#"
+              class="p-[10px] bg-[#FF8906] rounded-md text-[#0B132A] text-sm font-medium"
+              >+ Add Menu</a
+            >
+          </header>
+          <div class="section-title"></div>
+          <div class="section-body flex flex-col gap-y-4">
+            <div
+              class="item-product bg-[#E8E8E84D] flex items-center gap-x-7 p-[10px]"
+            >
+              <img
+                src="assets/img/image31.webp"
+                alt="coffee"
+                class="w-16 h-16 md:w-44 md:h-44 lg:w-44 lg:h-44"
+              />
+              <div class="product-info flex flex-col items-start gap-y-4">
+                <span
+                  class="text-xs text-[#fff] bg-[#D00000] p-[10px] rounded-full font-bold"
+                  >FLASH SALE!</span
+                >
+                <span class="text-lg text-[#0B0909] font-bold"
+                  >Hazelnut Latte</span
+                >
+                <span class="text-sm text-[#4F5665] font-normal"
+                  >2pcs | Regular | Ice | DineIn</span
+                >
+                <div class="flex gap-x-3 items-center">
+                  <span class="text-xs text-[#D00000] font-medium line-through"
+                    >IDR40.000</span
+                  >
+                  <span class="text-lg text-[#FF8906] font-medium"
+                    >IDR20.000</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="item-product bg-[#E8E8E84D] flex items-center gap-x-7 p-[10px]"
+            >
+              <img
+                src="assets/img/image31.webp"
+                alt="coffee"
+                class="w-16 h-16 md:w-44 md:h-44 lg:w-44 lg:h-44"
+              />
+              <div class="product-info flex flex-col items-start gap-y-4">
+                <span
+                  class="text-xs text-[#fff] bg-[#D00000] p-[10px] rounded-full font-bold"
+                  >FLASH SALE!</span
+                >
+                <span class="text-lg text-[#0B0909] font-bold"
+                  >Hazelnut Latte</span
+                >
+                <span class="text-sm text-[#4F5665] font-normal"
+                  >2pcs | Regular | Ice | DineIn</span
+                >
+                <div class="flex gap-x-3 items-center">
+                  <span class="text-xs text-[#D00000] font-medium line-through"
+                    >IDR40.000</span
+                  >
+                  <span class="text-lg text-[#FF8906] font-medium"
+                    >IDR20.000</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <header class="flex justify-between items-center mb-4">
+          <span class="text-xl text-[#0B132A]">Payment & Info Delivery</span>
+        </header>
+        <form action="" class="flex flex-col gap-y-3">
+          <div class="flex flex-col gap-y-3 relative">
+            <label for="email" class="text-sm font-semibold text-[#0B132A]"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter Your Email"
+              class="py-3.5 px-10 border rounded-lg border-[#DEDEDE] text-xs"
+            />
+            <div class="icon-email absolute top-12 left-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_99_1523)">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M1.74988 2C0.78338 2 -0.000122066 2.7835 -0.000122066 3.75V4.48577C-0.000285027 4.49479 -0.000284637 4.50381 -0.000122066 4.51282V12.25C-0.000122066 13.2165 0.783379 14 1.74988 14H14.2499C15.2164 14 15.9999 13.2165 15.9999 12.25V4.51265C16.0001 4.50376 16.0001 4.49485 15.9999 4.48594V3.75C15.9999 2.7835 15.2164 2 14.2499 2H1.74988ZM14.4999 4.07029V3.75C14.4999 3.61193 14.388 3.5 14.2499 3.5H1.74988C1.61181 3.5 1.49988 3.61193 1.49988 3.75V4.07029L7.99988 7.88063L14.4999 4.07029ZM1.49988 5.80902V12.25C1.49988 12.3881 1.61181 12.5 1.74988 12.5H14.2499C14.388 12.5 14.4999 12.3881 14.4999 12.25V5.80902L8.37917 9.39702C8.14495 9.53432 7.85481 9.53432 7.62059 9.39702L1.49988 5.80902Z"
+                    fill="#4F5665"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_99_1523">
+                    <rect width="16" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+          </div>
+          <div class="flex flex-col gap-y-3 relative">
+            <label for="fullname" class="text-sm font-semibold text-[#0B132A]"
+              >Full Name</label
+            >
+            <input
+              type="fullname"
+              id="fullname"
+              placeholder="Enter your Full Name"
+              class="py-3.5 px-10 border rounded-lg border-[#DEDEDE] text-xs"
+            />
+            <div class="icon-profile absolute top-12 left-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="14"
+                viewBox="0 0 12 14"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M5.98979 9.23096C3.41138 9.23096 1.20947 9.6208 1.20947 11.1821C1.20947 12.7433 3.39741 13.1471 5.98979 13.1471C8.5682 13.1471 10.7695 12.7567 10.7695 11.196C10.7695 9.6354 8.58217 9.23096 5.98979 9.23096Z"
+                  stroke="#4F5665"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M5.98968 7.00408C7.68175 7.00408 9.05317 5.63202 9.05317 3.93996C9.05317 2.24789 7.68175 0.876465 5.98968 0.876465C4.29762 0.876465 2.92556 2.24789 2.92556 3.93996C2.91984 5.62631 4.28238 6.99837 5.96809 7.00408H5.98968Z"
+                  stroke="#4F5665"
+                  stroke-width="1.42857"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="flex flex-col gap-y-3 relative">
+            <label for="address" class="text-sm font-semibold text-[#0B132A]"
+              >Address</label
+            >
+            <input
+              type="address"
+              id="address"
+              placeholder="Enter Your Address"
+              class="py-3.5 px-10 border rounded-lg border-[#DEDEDE] text-xs"
+            />
+            <div class="icon-location absolute top-12 left-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="14"
+                viewBox="0 0 12 14"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.66659 6.0005C7.66659 5.07965 6.92043 4.3335 6.00026 4.3335C5.07941 4.3335 4.33325 5.07965 4.33325 6.0005C4.33325 6.92067 5.07941 7.66683 6.00026 7.66683C6.92043 7.66683 7.66659 6.92067 7.66659 6.0005Z"
+                  stroke="#4F5665"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M5.99967 13C5.20069 13 1 9.59892 1 6.04219C1 3.25776 3.23807 1 5.99967 1C8.76128 1 11 3.25776 11 6.04219C11 9.59892 6.79866 13 5.99967 13Z"
+                  stroke="#4F5665"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="">
+            <span class="text-sm font-semibold text-[#0B132A]">Delivery</span>
+            <div>
+              <a href="#">Dine In</a>
+              <a href="#">Door Delivery</a>
+              <a href="#">Pick Up</a>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
