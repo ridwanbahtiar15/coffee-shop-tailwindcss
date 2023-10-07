@@ -34,65 +34,83 @@
       <div class="nav-start flex items-center gap-x-[60px] text-sm font-normal">
         <img src="assets/img/coffee-shop.webp" alt="logo" class="w-32 h-8" />
         <a
-          href="#"
-          class="hover:border-b-2 hover:border-[#FF8906] focus:border-b-2 focus:border-[#FF8906] hidden md:block"
+          href="/home"
+          class="hover:border-b-2 hover:border-[#FF8906] focus:border-b-2 focus:border-[#FF8906] hidden lg:block"
           >Home</a
         >
         <a
-          href="#"
-          class="hover:border-b-2 hover:border-[#FF8906] focus:border-b-2 focus:border-[#FF8906] hidden md:block"
+          href="/product"
+          class="hover:border-b-2 hover:border-[#FF8906] focus:border-b-2 focus:border-[#FF8906] hidden lg:block"
           >Product</a
         >
       </div>
       <div class="nav-end flex gap-x-[22px] items-center">
-        <div class="icon-search hidden md:block">
+        <div class="icon-search hidden lg:block">
           <img src="assets/img/Search.svg" alt="Search" class="w-full h-full" />
         </div>
-        <div class="icon-cart hidden md:block">
+        <a href="#" class="hidden lg:block">
           <img
             src="assets/img/ShoppingCart.svg"
             alt="ShoppingCart"
             class="w-full h-full"
           />
-        </div>
-        <div class="icon-profile hidden md:block">
+        </a>
+        <a href="/profile" class="hidden lg:block">
           <img
             src="assets/img/profile.jpg"
             alt="icon-profile"
             class="rounded-full w-8 h-8"
           />
-        </div>
-        <div id="dropdown-arrow" class="hidden md:block">
+        </a>
+        <div id="dropdown-arrow" class="hidden lg:block cursor-pointer">
           <img src="assets/img/down.svg" alt="down" class="w-full h-full" />
         </div>
         <div
-          class="absolute top-20 right-24 bg-[#FFF] border border-[#E8E8E8] text-sm font-normal py-2 px-6 hidden lg:right-32"
+          class="absolute top-20 right-24 bg-[#FFF] border border-[#E8E8E8] text-sm font-normal py-2 px-6 hidden max-lg:hidden lg:right-32"
           id="dropdown-menu"
         >
           <ul class="flex flex-col gap-y-2">
-            <li class="p-1 hover:bg-[#FF8906] hover:font-medium">Home</li>
-            <li class="p-1 hover:bg-[#FF8906] hover:font-medium">Product</li>
             <li class="p-1 hover:bg-[#FF8906] hover:font-medium">
-              History Order
+              <a href="/home">Home</a>
             </li>
-            <li class="p-1 hover:bg-[#FF8906] hover:font-medium">Logout</li>
+            <li class="p-1 hover:bg-[#FF8906] hover:font-medium">
+              <a href="/product">Product</a>
+            </li>
+            <li class="p-1 hover:bg-[#FF8906] hover:font-medium">
+              <a href="/login">Sign In</a>
+            </li>
+            <li class="p-1 hover:bg-[#FF8906] hover:font-medium">
+              <a href="/register">Sign Up</a>
+            </li>
           </ul>
         </div>
-        <div class="text-2xl md:hidden" id="hamburger-menu">
-          <i class="fa-solid fa-bars"></i>
+        <div class="lg:hidden" id="burger-menu">
+          <img
+            src="assets/img/burger-menu-dark.svg"
+            alt="burger-menu-dark"
+            id="burger-menu"
+            class="w-full h-full"
+          />
         </div>
       </div>
     </nav>
     <nav
       id="dropdown-mobile"
-      class="w-full h-full font-plusJakartaSans py-4 px-5 border-b-[1px] border-b-[#E8E8E8] hidden md:hidden"
+      class="w-full h-full font-plusJakartaSans py-4 px-5 border-b-[1px] border-b-[#E8E8E8] hidden lg:hidden"
     >
       <ul class="flex flex-col gap-y-2">
-        <li class="p-1 hover:bg-[#FF8906] hover:font-medium">Profile</li>
-        <li class="p-1 hover:bg-[#FF8906] hover:font-medium">Home</li>
-        <li class="p-1 hover:bg-[#FF8906] hover:font-medium">Product</li>
-        <li class="p-1 hover:bg-[#FF8906] hover:font-medium">History Order</li>
-        <li class="p-1 hover:bg-[#FF8906] hover:font-medium">Logout</li>
+        <li class="p-1 hover:bg-[#FF8906] hover:font-medium">
+          <a href="/home">Home</a>
+        </li>
+        <li class="p-1 hover:bg-[#FF8906] hover:font-medium">
+          <a href="/product">Product</a>
+        </li>
+        <li class="p-1 hover:bg-[#FF8906] hover:font-medium">
+          <a href="/login">Sign In</a>
+        </li>
+        <li class="p-1 hover:bg-[#FF8906] hover:font-medium">
+          <a href="/register">Sign Up</a>
+        </li>
       </ul>
     </nav>
     <header
@@ -113,7 +131,7 @@
             >
             <a
               href="#"
-              class="p-[10px] bg-[#FF8906] rounded-md text-[#0B132A] text-sm font-medium"
+              class="p-[10px] bg-[#FF8906] hover:bg-[#db8625] rounded-md text-[#0B132A] text-sm font-medium active:ring-offset-2 active:ring-2 active:ring-[#FF8906]"
               >+ Add Menu</a
             >
           </header>
@@ -217,7 +235,7 @@
                 placeholder="Enter Your Email"
                 class="py-3.5 px-10 border rounded-lg border-[#DEDEDE] text-xs tracking-wide outline-none focus:border-[#FF8906]"
               />
-              <div class="icon-email absolute top-12 left-4 lg:top-[50px]">
+              <div class="icon-email absolute top-[46px] left-4 lg:top-[50px]">
                 <img
                   src="assets/img/mail.svg"
                   alt="mail.svg"
@@ -237,7 +255,9 @@
                 placeholder="Enter your Full Name"
                 class="py-3.5 px-10 border rounded-lg border-[#DEDEDE] text-xs tracking-wide outline-none focus:border-[#FF8906]"
               />
-              <div class="icon-profile absolute top-12 left-4 lg:top-[50px]">
+              <div
+                class="icon-profile absolute top-[46px] left-4 lg:top-[50px]"
+              >
                 <img
                   src="assets/img/Profile.svg"
                   alt="Profile"
@@ -257,7 +277,9 @@
                 placeholder="Enter Your Address"
                 class="py-3.5 px-10 border rounded-lg border-[#DEDEDE] text-xs tracking-wide outline-none focus:border-[#FF8906]"
               />
-              <div class="icon-location absolute top-12 left-4 lg:top-[50px]">
+              <div
+                class="icon-location absolute top-[46px] left-4 lg:top-[50px]"
+              >
                 <img
                   src="assets/img/Location.svg"
                   alt="Location.svg"
@@ -332,7 +354,7 @@
             >
           </div>
           <button
-            class="p-[10px] text-sm font-medium rounded-md text-[#0B132A] bg-[#FF8906]"
+            class="p-[10px] text-sm font-medium rounded-md text-[#0B132A] bg-[#FF8906] hover:bg-[#db8625] active:ring-offset-2 active:ring-2 active:ring-[#FF8906]"
           >
             Checkout
           </button>
@@ -386,7 +408,7 @@
       </section>
     </main>
     <footer
-      class="font-plusJakartaSans p-5 mt-5 flex flex-wrap gap-y-8 sm:px-5 md:px-24 md:mt-8 lg:px-[130px]"
+      class="font-plusJakartaSans p-5 mt-5 flex flex-wrap gap-y-8 sm:px-5 md:px-24 pt md:pt-10 md:pb-20 md:mt-10 lg:px-[130px]"
     >
       <section
         class="flex flex-col gap-y-6 w-full lg:self-end lg:w-2/5 lg:pr-16"
@@ -451,9 +473,9 @@
       dropdownMenu.classList.toggle("hidden");
     });
 
-    const hamburgerMenu = document.getElementById("hamburger-menu");
+    const burgerMenu = document.getElementById("burger-menu");
     const dropdownMobile = document.getElementById("dropdown-mobile");
-    hamburgerMenu.addEventListener("click", (e) => {
+    burgerMenu.addEventListener("click", (e) => {
       dropdownMobile.classList.toggle("hidden");
     });
   </script>
