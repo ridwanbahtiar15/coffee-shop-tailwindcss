@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Profile" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            plusJakartaSans: ["Plus Jakarta Sans"],
+            rubik: ["Rubik"],
+          },
+        },
+      };
+    </script>
+    <title>Profile</title>
+  </head>
+  <body>
+    <nav
+      class="w-full flex justify-between py-4 px-5 items-center font-plusJakartaSans bg-[#0B0909] md:px-24 lg:px-[130px]"
+    >
+      <div class="nav-start flex items-center gap-x-[60px] text-sm font-normal">
+        <img
+          src="assets/img/coffee-shop-white.svg"
+          alt="logo"
+          class="w-32 h-8"
+        />
+        <a
+          href="#"
+          class="text-[#FFF] hover:border-b-2 hover:border-[#FF8906] focus:border-b-2 focus:border-[#FF8906] hidden lg:block"
+          >Home</a
+        >
+        <a
+          href="#"
+          class="text-[#FFF] hover:border-b-2 hover:border-[#FF8906] focus:border-b-2 focus:border-[#FF8906] hidden lg:block"
+          >Product</a
+        >
+      </div>
+      <div class="nav-end flex gap-x-[22px] items-center">
+        <div class="icon-search hidden lg:block">
+          <img
+            src="assets/img/Search-white.svg"
+            alt="Search"
+            class="w-full h-full"
+          />
+        </div>
+        <div class="icon-cart hidden lg:block">
+          <img
+            src="assets/img/ShoppingCart-white.svg"
+            alt="ShoppingCart"
+            class="w-full h-full"
+          />
+        </div>
+        <a
+          href="#"
+          class="text-[#FFF] text-sm font-medium py-3 px-[18px] border border-[#ebeaea] hover:bg-[#FFF] hover:text-[#0B132A] rounded-md hidden lg:block"
+        >
+          Sign In
+        </a>
+        <a
+          href="#"
+          class="text-[#0B132A] text-sm font-medium py-3 px-[18px] bg-[#FF8906] hover:bg-[#db8625] rounded-md hidden lg:block"
+        >
+          Sign Up
+        </a>
+        <div class="text-2xl lg:hidden" id="burger-menu">
+          <img
+            src="assets/img/burger-menu.svg"
+            alt="burger-menu"
+            id="burger-menu"
+            class="w-full h-full"
+          />
+        </div>
+      </div>
+    </nav>
+    <nav
+      id="dropdown-mobile"
+      class="w-full h-full font-plusJakartaSans py-4 px-5 border-b-[1px] border-b-[#E8E8E8] hidden md:px-24 lg:hidden"
+    >
+      <ul class="flex flex-col gap-y-2">
+        <li class="p-1 hover:bg-[#FF8906] hover:font-medium">Home</li>
+        <li class="p-1 hover:bg-[#FF8906] hover:font-medium">Product</li>
+        <li class="p-1 hover:bg-[#FF8906] hover:font-medium">Search</li>
+        <li class="p-1 hover:bg-[#FF8906] hover:font-medium">Sign In</li>
+        <li class="p-1 hover:bg-[#FF8906] hover:font-medium">Sign Up</li>
+      </ul>
+    </nav>
+    <header class="pt-10 pb-7 px-5 md:px-24 lg:px-[130px]">
+      <h1
+        class="font-plusJakartaSans text-2xl font-medium text-[#0B0909] lg:text-5xl"
+      >
+        Profile
+      </h1>
+    </header>
+    <main
+      class="font-plusJakartaSans px-5 md:px-24 lg:px-[130px] flex flex-col gap-y-5 lg:flex-row lg:gap-x-5"
+    >
+      <section
+        class="border border-[#E8E8E8] rounded-md py-3.5 px-12 flex flex-col gap-y-4 items-center h-full lg:w-1/3"
+      >
+        <span class="text-lg font-medium text-[#0B132A] lg:text-xl"
+          >Ghaluh Wizard</span
+        >
+        <span class="text-sm font-normal text-[#4F5665] lg:text-base"
+          >ghaluhwizz@gmail.com</span
+        >
+        <img
+          src="assets/img/profile.jpg"
+          alt="user-image"
+          class="w-20 h-20 rounded-full"
+        />
+        <button
+          type="button"
+          class="text-sm font-medium text-[#0B132A] py-3 px-5 bg-[#FF8906] hover:bg-[#db8625] rounded-md w-full lg:text-xs xl:text-sm"
+        >
+          Upload New Photo
+        </button>
+        <span class="text-base font-normal text-[#4F5665] lg:text-xs xl:text-sm"
+          >Since <span class="font-medium">20 January 2022</span></span
+        >
+      </section>
+      <section
+        class="border border-[#E8E8E8] rounded-md py-4 px-2.5 md:py-6 md:px-12 lg:w-2/3"
+      >
+        <form class="flex flex-col gap-y-5">
+          <div class="flex flex-col gap-y-3 relative">
+            <label
+              for="fullname"
+              class="text-sm md:text-base font-semibold text-[#0B132A] lg:text-base"
+              >Full Name</label
+            >
+            <input
+              type="text"
+              id="fullname"
+              placeholder="Enter Your Full Name"
+              class="py-3.5 px-10 border rounded-lg border-[#DEDEDE] text-xs tracking-wide outline-none focus:border-[#FF8906]"
+            />
+            <div class="icon-email absolute top-[46px] left-4 md:top-[50px]">
+              <img
+                src="assets/img/Profile.svg"
+                alt="mail.svg"
+                class="w-full h-full"
+              />
+            </div>
+          </div>
+          <div class="flex flex-col gap-y-3 relative">
+            <label
+              for="email"
+              class="text-sm md:text-base font-semibold text-[#0B132A] lg:text-base"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter Your Email"
+              class="py-3.5 px-10 border rounded-lg border-[#DEDEDE] text-xs tracking-wide outline-none focus:border-[#FF8906]"
+            />
+            <div class="icon-email absolute top-[46px] left-4 md:top-[50px]">
+              <img
+                src="assets/img/mail.svg"
+                alt="mail.svg"
+                class="w-full h-full"
+              />
+            </div>
+          </div>
+          <div class="flex flex-col gap-y-3 relative">
+            <label
+              for="phone"
+              class="text-sm md:text-base font-semibold text-[#0B132A] lg:text-base"
+              >Phone</label
+            >
+            <input
+              type="number"
+              id="phone"
+              placeholder="Enter Your Phone Number"
+              class="py-3.5 px-10 border rounded-lg border-[#DEDEDE] text-xs tracking-wide outline-none focus:border-[#FF8906]"
+            />
+            <div class="absolute top-[46px] left-4 md:top-[50px]">
+              <img
+                src="assets/img/PhoneCall.svg"
+                alt="PhoneCall"
+                class="w-full h-full"
+              />
+            </div>
+          </div>
+          <div class="flex flex-col gap-y-3 relative">
+            <label
+              for="password"
+              class="text-sm md:text-base font-semibold text-[#0B132A] lg:text-base"
+              >Password</label
+            >
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter Your Password"
+              class="py-3.5 px-10 border rounded-lg border-[#DEDEDE] text-xs tracking-wide outline-none focus:border-[#FF8906]"
+            />
+            <div class="icon-password absolute top-[46px] left-4 md:top-[50px]">
+              <img
+                src="assets/img/Password.svg"
+                alt="Password"
+                class="w-full h-full"
+              />
+            </div>
+            <div
+              class="icon-eyeslash absolute top-[46px] right-4 md:top-[50px] block"
+              id="btn-hidden-password"
+            >
+              <img
+                src="assets/img/EyeSlash.svg"
+                alt="EyeSlash"
+                class="w-full h-full"
+              />
+            </div>
+            <div
+              class="icon-eyeslash absolute top-[42px] right-[15px] md:top-[46px] hidden"
+              id="btn-show-password"
+            >
+              <i class="fa-regular fa-eye" style="color: #4f565b"></i>
+            </div>
+          </div>
+          <div class="flex flex-col gap-y-3 relative">
+            <label
+              for="address"
+              class="text-sm md:text-base font-semibold text-[#0B132A] lg:text-base"
+              >Address</label
+            >
+            <input
+              type="text"
+              id="address"
+              placeholder="Enter Your Address"
+              class="py-3.5 px-10 border rounded-lg border-[#DEDEDE] text-xs tracking-wide outline-none focus:border-[#FF8906]"
+            />
+            <div class="absolute top-[46px] left-4 md:top-[50px]">
+              <img
+                src="assets/img/Location.svg"
+                alt="Location"
+                class="w-full h-full"
+              />
+            </div>
+          </div>
+          <button
+            class="text-base font-medium text-[#0B132A] bg-[#FF8906] p-2.5 rounded-md hover:bg-[#db8625]"
+          >
+            Register
+          </button>
+        </form>
+      </section>
+    </main>
+    <footer
+      class="font-plusJakartaSans p-5 mt-5 flex flex-wrap gap-y-8 sm:px-5 md:px-24 md:mt-8 lg:px-[130px]"
+    >
+      <section
+        class="flex flex-col gap-y-6 w-full lg:self-end lg:w-2/5 lg:pr-16"
+      >
+        <img src="assets/img/coffee-shop.webp" alt="logo" class="w-32 h-8" />
+        <span class="text-base font-normal text-[#4F5665]">
+          Coffee Shop is a store that sells some good meals, and especially
+          coffee. We provide high quality beans
+        </span>
+        <span class="font-rubik text-base font-semibold text-[#0B132A]"
+          >&copy;2020CoffeeStore</span
+        >
+      </section>
+      <section class="flex flex-col gap-y-5 w-full sm:w-1/3 md:1/3 lg:w-1/5">
+        <p class="text-base font-medium text-[#0B132A]">Product</p>
+        <p class="text-sm font-normal text-[#4F5665]">Our Product</p>
+        <p class="text-sm font-normal text-[#4F5665]">Pricing</p>
+        <p class="text-sm font-normal text-[#4F5665]">Locations</p>
+        <p class="text-sm font-normal text-[#4F5665]">Countries</p>
+        <p class="text-sm font-normal text-[#4F5665]">Blog</p>
+      </section>
+      <section class="flex flex-col gap-y-5 w-full sm:w-1/3 md:1/3 lg:w-1/5">
+        <p class="text-base font-medium text-[#0B132A]">Engage</p>
+        <p class="text-sm font-normal text-[#4F5665]">Partner</p>
+        <p class="text-sm font-normal text-[#4F5665]">FAQ</p>
+        <p class="text-sm font-normal text-[#4F5665]">About Us</p>
+        <p class="text-sm font-normal text-[#4F5665]">Provice Policy</p>
+        <p class="text-sm font-normal text-[#4F5665]">Term of Services</p>
+      </section>
+      <section class="social-media w-full sm:w-1/3 md:1/3 lg:w-1/5">
+        <p class="text-base font-medium text-[#0B132A] mb-4">Social Media</p>
+        <div class="flex">
+          <div>
+            <img
+              src="assets/img/Facebook.svg"
+              alt="Facebook"
+              class="w-full h-full"
+            />
+          </div>
+          <div>
+            <img
+              src="assets/img/Twitter.svg"
+              alt="Twitter"
+              class="w-full h-full"
+            />
+          </div>
+          <div>
+            <img
+              src="assets/img/Instagram.svg"
+              alt="Instagram"
+              class="w-full h-full"
+            />
+          </div>
+        </div>
+      </section>
+    </footer>
+  </body>
+  <script>
+    const burgerMenu = document.getElementById("burger-menu");
+    const dropdownMobile = document.getElementById("dropdown-mobile");
+    burgerMenu.addEventListener("click", (e) => {
+      dropdownMobile.classList.toggle("hidden");
+    });
+
+    const hiddenPassBtn = document.getElementById("btn-hidden-password");
+    const password = document.getElementById("password");
+    const showPassBtn = document.getElementById("btn-show-password");
+    hiddenPassBtn.addEventListener("click", (e) => {
+      hiddenPassBtn.classList.toggle("hidden");
+      showPassBtn.classList.toggle("hidden");
+      password.type == "password"
+        ? (password.type = "text")
+        : (password.type = "password");
+    });
+
+    showPassBtn.addEventListener("click", (e) => {
+      hiddenPassBtn.classList.toggle("hidden");
+      showPassBtn.classList.toggle("hidden");
+      password.type == "password"
+        ? (password.type = "text")
+        : (password.type = "password");
+    });
+  </script>
+</html>
