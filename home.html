@@ -105,13 +105,17 @@
     </nav>
     <header class="flex flex-wrap font-plusJakartaSans">
       <div
-        class="item-section w-1/2 bg-gradient-to-br from-[#777c82_-114.74%] to-[#0b0909_91.35%] select-none flex justify-center items-center"
+        class="w-full h-screen bg-gradient-to-br from-[#777c82_-114.74%] to-[#0b0909_91.35%] select-none flex justify-center items-center xl:h-[1024px] xl:w-1/2"
       >
-        <article class="flex flex-col w-[60%] gap-y-6 items-baseline">
-          <h1 class="text-[#FFF] text-5xl font-medium leading-tight">
+        <article
+          class="flex flex-col gap-y-6 items-baseline w-[90%] md:w-[75%] lg:w-[60%] relative"
+        >
+          <h1
+            class="text-[#FFF] text-2xl font-medium leading-tight md:text-5xl md:leading-snug"
+          >
             Start Your Day with Coffee and Good Meals
           </h1>
-          <span class="text-base font-normal text-[#FFF]">
+          <span class="text-sm font-normal text-[#FFF] md:text-base">
             We provide high quality beans, good taste, and healthy meals made by
             love just for you. Start your day with us for a bigger smile!
           </span>
@@ -122,26 +126,47 @@
           >
           <div class="flex justify-between self-stretch">
             <span class="flex flex-col gap-y-3"
-              ><p class="text-5xl font-medium text-[#FF8906]">90+</p>
-              <p class="text-base font-normal text-[#FFF]">Staff</p></span
+              ><p class="text-2xl font-medium text-[#FF8906] md:text-5xl">
+                90+
+              </p>
+              <p class="text-xs font-normal text-[#FFF] md:text-base">
+                Staff
+              </p></span
             >
-            <div class="w-[2px] h-20 bg-[#FFF]"></div>
+            <div class="w-[2px] h-18 bg-[#FFF] md:h-20"></div>
             <span class="flex flex-col gap-y-3"
-              ><p class="text-5xl font-medium text-[#FF8906]">30+</p>
-              <p class="text-base font-normal text-[#FFF]">Stores</p></span
+              ><p class="text-2xl font-medium text-[#FF8906] md:text-5xl">
+                30+
+              </p>
+              <p class="text-xs font-normal text-[#FFF] md:text-base">
+                Stores
+              </p></span
             >
-            <div class="w-[2px] h-20 bg-[#FFF]"></div>
+            <div class="w-[2px] h-18 bg-[#FFF] md:h-20"></div>
             <span class="flex flex-col gap-y-3"
-              ><p class="text-5xl font-medium text-[#FF8906]">800+</p>
-              <p class="text-base font-normal text-[#FFF]">Customer</p></span
+              ><p class="text-2xl font-medium text-[#FF8906] md:text-5xl">
+                800+
+              </p>
+              <p class="text-xs font-normal text-[#FFF] md:text-base">
+                Customer
+              </p></span
             >
+          </div>
+          <div
+            class="absolute bottom-20 right-0 p-3 bg-[#FF8906] rounded-full md:bottom-[100px] xl:hidden"
+          >
+            <img
+              src="assets/img/ChatCircleDots.svg"
+              alt="ChatCircleDots"
+              class="w-8 h-8"
+            />
           </div>
         </article>
       </div>
       <div
-        class="w-1/2 bg-[url('/assets/img/Rectangle287.webp')] h-[1024px] relative"
+        class="bg-[url('/assets/img/Rectangle287.webp')] h-[1024px] relative hidden xl:w-1/2 xl:block"
       >
-        <div class="absolute bottom-24 right-24 p-3 bg-[#db8625] rounded-full">
+        <div class="absolute bottom-24 right-24 p-3 bg-[#FF8906] rounded-full">
           <img
             src="assets/img/ChatCircleDots.svg"
             alt="ChatCircleDots"
@@ -149,16 +174,22 @@
           />
         </div>
       </div>
-      <div class="w-1/2 flex justify-center items-center">
-        <article class="w-[60%] flex flex-col gap-y-6">
-          <div class="flex gap-x-6 items-center">
-            <div class="w-4 h-16 bg-[#FF8906]"></div>
-            <h1 class="text-5xl font-medium leading-tight text-[#0B132A]">
+      <div
+        class="w-full h-screen flex justify-center items-center xl:h-[574px] xl:w-1/2"
+      >
+        <article class="w-[90%] flex flex-col gap-y-6 md:w-[75%] lg:w-[60%]">
+          <div class="flex gap-x-6 items-center flex-col gap-y-4 xl:flex-row">
+            <div class="hidden bg-[#FF8906] md:w-4 h-16 xl:block"></div>
+            <h1
+              class="text-2xl font-medium leading-tight text-[#0B132A] text-center md:text-5xl xl:text-left"
+            >
               We Provide <span class="text-[#8E6447]">Good Coffee</span> and
               <span class="text-[#8E6447]">Healthy Meals</span>
             </h1>
+            <div class="bg-[#FF8906] w-12 h-1 lg:w-16 lg:h-2 xl:hidden"></div>
           </div>
-          <span class="text-base font-normal text-[#4F5665]"
+          <span
+            class="text-sm font-normal text-[#4F5665] text-center md:text-base xl:text-left"
             >You can explore the menu that we provide with fun and have their
             own taste and make your day better.</span
           >
@@ -191,9 +222,117 @@
         </article>
       </div>
       <div
-        class="w-1/2 bg-[url('/assets/img/Rectangle291.webp')] h-[574px]"
+        class="bg-[url('/assets/img/Rectangle291.webp')] h-[574px] hidden xl:block xl:w-1/2"
       ></div>
     </header>
+    <main class="font-plusJakartaSans px-5 md:px-24 lg:p-[130px]">
+      <div class="items-center text-center flex flex-col gap-y-5">
+        <h1 class="text-2xl font-medium text-[#0B132A] md:text-5xl">
+          Here is People's <span class="text-[#8E6447]">Favorite</span>
+        </h1>
+        <div class="bg-[#FF8906] w-12 h-1 lg:w-16 lg:h-2"></div>
+        <span class="text-sm font-normal text-[#4F5665] md:text-base"
+          >Let’s choose and have a bit taste of poeple’s favorite. It might be
+          yours too!</span
+        >
+      </div>
+      <div class="mt-6 flex flex-col gap-y-6">
+        <div class="item-product">
+          <img
+            src="assets/img/image27.webp"
+            alt="product"
+            class="w-full h-full"
+          />
+          <div class="flex flex-col gap-y-3">
+            <span class="text-xl font-medium text-[#0B132A]"
+              >Hazelnut Latte</span
+            >
+            <p class="text-sm font-normal text-[#0B132A]">
+              You can explore the menu that we provide with fun and have their
+              own taste and make your day better.
+            </p>
+            <p class="text-lg font-medium text-[#FF8906]">IDR 20.000</p>
+            <div class="flex flex-col gap-y-2">
+              <button
+                type="button"
+                class="text-base font-medium text-[#0B132A] bg-[#FF8906] p-2.5 rounded-md hover:bg-[#db8625] active:ring-offset-2 active:ring-2 active:ring-[#FF8906]"
+              >
+                Buy
+              </button>
+              <button
+                type="button"
+                class="text-base font-medium border-2 border-[#FF8906] text-[#0B132A] bg-[#FFF] p-2.5 rounded-md hover:bg-slate-200 active:ring-offset-2 active:ring-2 active:ring-[#FF8906] flex justify-center items-center"
+              >
+                <img src="assets/img/ShoppingCartOrange.svg" alt="cart" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="item-product">
+          <img
+            src="assets/img/image22.webp"
+            alt="product"
+            class="img-product"
+          />
+          <div class="card">
+            <span class="product-name">Hazelnut Latte</span>
+            <p class="product-info">
+              You can explore the menu that we provide with fun and have their
+              own taste and make your day better.
+            </p>
+            <p class="price">IDR 20.000</p>
+            <div class="product-button">
+              <a href="#" class="buy">Buy</a>
+              <a href="#" class="cart"
+                ><img src="assets/img/ShoppingCartOrange.webp" alt="cart"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="item-product">
+          <img
+            src="assets/img/image30.webp"
+            alt="product"
+            class="img-product"
+          />
+          <div class="card">
+            <span class="product-name">Hazelnut Latte</span>
+            <p class="product-info">
+              You can explore the menu that we provide with fun and have their
+              own taste and make your day better.
+            </p>
+            <p class="price">IDR 20.000</p>
+            <div class="product-button">
+              <a href="#" class="buy">Buy</a>
+              <a href="#" class="cart"
+                ><img src="assets/img/ShoppingCartOrange.webp" alt="cart"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="item-product">
+          <img
+            src="assets/img/image31.webp"
+            alt="product"
+            class="img-product"
+          />
+          <div class="card">
+            <span class="product-name">Hazelnut Latte</span>
+            <p class="product-info">
+              You can explore the menu that we provide with fun and have their
+              own taste and make your day better.
+            </p>
+            <p class="price">IDR 20.000</p>
+            <div class="product-button">
+              <a href="#" class="buy">Buy</a>
+              <a href="#" class="cart"
+                ><img src="assets/img/ShoppingCartOrange.webp" alt="cart"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <!-- <footer
       class="font-plusJakartaSans p-5 mt-5 flex flex-wrap gap-y-8 sm:px-5 md:px-24 pt md:pt-10 md:pb-20 md:mt-10 lg:px-[130px]"
