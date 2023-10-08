@@ -18,9 +18,11 @@
     <script>
       tailwind.config = {
         theme: {
-          fontFamily: {
-            plusJakartaSans: ["Plus Jakarta Sans"],
-            rubik: ["Rubik"],
+          extend: {
+            fontFamily: {
+              plusJakartaSans: ["Plus Jakarta Sans"],
+              rubik: ["Rubik"],
+            },
           },
         },
       };
@@ -64,14 +66,14 @@
           />
         </a>
         <a
-          href="/login"
-          class="text-[#FFF] text-sm font-medium py-3 px-[18px] border border-[#ebeaea] hover:bg-[#FFF] hover:text-[#0B132A] rounded-md hidden lg:block"
+          href="#"
+          class="text-[#FFF] text-sm font-medium py-3 px-[18px] border border-[#ebeaea] hover:bg-[#FFF] hover:text-[#0B132A] rounded-md hidden lg:block active:ring active:ring-slate-300"
         >
           Sign In
         </a>
         <a
-          href="/register"
-          class="text-[#0B132A] text-sm font-medium py-3 px-[18px] bg-[#FF8906] hover:bg-[#db8625] rounded-md hidden lg:block"
+          href="#"
+          class="text-[#0B132A] text-sm font-medium py-3 px-[18px] bg-[#FF8906] hover:bg-[#db8625] rounded-md hidden lg:block active:ring active:ring-orange-300"
         >
           Sign Up
         </a>
