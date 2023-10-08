@@ -11,10 +11,6 @@
       href="https://fonts.googleapis.com/css2?family=Archivo&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Rubik&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
     <script>
       tailwind.config = {
         theme: {
@@ -74,7 +70,7 @@
               <a href="/history-order">History Order</a>
             </li>
             <li class="p-1 hover:bg-[#FF8906] hover:font-medium">
-              <a href="#">Logout</a>
+              <button onclick="showLogoutModal()">Logout</button>
             </li>
           </ul>
         </div>
@@ -106,7 +102,7 @@
           <a href="/history-order">History Order</a>
         </li>
         <li class="p-1 hover:bg-[#FF8906] hover:font-medium">
-          <a href="#">Logout</a>
+          <button onclick="showLogoutModal()">Logout</button>
         </li>
       </ul>
     </nav>
@@ -462,8 +458,38 @@
         </div>
       </section>
     </footer>
+
+    <!-- logout modal -->
+    <div
+      class="bg-gray-200 justify-center items-center h-screen select-none opacity-0 duration-200 transition-opacity hidden"
+      id="logoutModal"
+    >
+      <div
+        class="fixed left-0 top-0 bg-black bg-opacity-50 w-screen h-screen flex justify-center items-center px-[10px] md:px-0"
+      >
+        <div
+          class="bg-white rounded shadow-md p-8 w-full flex justify-center items-center flex-col gap-y-8 md:w-[50%] lg:w-[30%]"
+        >
+          <h1 class="text-xl font-medium text-[#0B132A]">Are you sure?</h1>
+          <div class="flex gap-x-6">
+            <button
+              class="p-[10px] bg-[#FF8906] hover:bg-[#db8625] rounded-md text-[#0B132A] text-base font-medium active:ring-offset-2 active:ring-2 active:ring-[#FF8906]"
+            >
+              Confirm
+            </button>
+            <button
+              class="p-[10px] bg-[#FFF] border-2 hover:bg-slate-200 rounded-md text-[#0B132A] text-base font-medium active:ring-offset-2 active:ring-2 active:ring-[#0B132A]"
+              onclick="cancelLogoutModal()"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
   <script>
+    // dropdown
     const dropdownBtn = document.getElementById("dropdown-arrow");
     const dropdownMenu = document.getElementById("dropdown-menu");
     dropdownBtn.addEventListener("click", (e) => {
@@ -475,5 +501,24 @@
     burgerMenu.addEventListener("click", (e) => {
       dropdownMobile.classList.toggle("hidden");
     });
+
+    // logout modal
+    const logoutClassToggle = () => {
+      const logoutModal = document.getElementById("logoutModal");
+      logoutModal.classList.toggle("flex");
+      logoutModal.classList.toggle("hidden");
+    };
+
+    const showLogoutModal = () => {
+      logoutClassToggle();
+      setTimeout(() => {
+        logoutModal.classList.toggle("opacity-100");
+      }, 20);
+    };
+
+    const cancelLogoutModal = () => {
+      logoutClassToggle();
+      logoutModal.classList.toggle("opacity-100");
+    };
   </script>
 </html>
