@@ -113,7 +113,11 @@
         <div class="text-center text-sm md:text-base">
           <span
             >No Have An Account?
-            <span><a href="#" class="font-medium underline">Register</a></span>
+            <span
+              ><a href="/register" class="font-medium underline"
+                >Register</a
+              ></span
+            >
           </span>
         </div>
         <div class="flex justify-between items-center">
@@ -156,22 +160,21 @@
   </body>
   <script>
     const hiddenPassBtn = document.getElementById("btn-hidden-password");
-    const password = document.getElementById("password");
     const showPassBtn = document.getElementById("btn-show-password");
+    const password = document.getElementById("password");
+
+    const passClaslistToggle = (hidden, show, pass) => {
+      hidden.classList.toggle("hidden");
+      show.classList.toggle("hidden");
+      pass.type == "password" ? (pass.type = "text") : (pass.type = "password");
+    };
+
     hiddenPassBtn.addEventListener("click", (e) => {
-      hiddenPassBtn.classList.toggle("hidden");
-      showPassBtn.classList.toggle("hidden");
-      password.type == "password"
-        ? (password.type = "text")
-        : (password.type = "password");
+      passClaslistToggle(hiddenPassBtn, showPassBtn, password);
     });
 
     showPassBtn.addEventListener("click", (e) => {
-      hiddenPassBtn.classList.toggle("hidden");
-      showPassBtn.classList.toggle("hidden");
-      password.type == "password"
-        ? (password.type = "text")
-        : (password.type = "password");
+      passClaslistToggle(hiddenPassBtn, showPassBtn, password);
     });
   </script>
 </html>

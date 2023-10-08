@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Archivo&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Rubik&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <script>
       tailwind.config = {
         theme: {
@@ -333,22 +337,21 @@
     });
 
     const hiddenPassBtn = document.getElementById("btn-hidden-password");
-    const password = document.getElementById("password");
     const showPassBtn = document.getElementById("btn-show-password");
+    const password = document.getElementById("password");
+
+    const passClaslistToggle = (hidden, show, pass) => {
+      hidden.classList.toggle("hidden");
+      show.classList.toggle("hidden");
+      pass.type == "password" ? (pass.type = "text") : (pass.type = "password");
+    };
+
     hiddenPassBtn.addEventListener("click", (e) => {
-      hiddenPassBtn.classList.toggle("hidden");
-      showPassBtn.classList.toggle("hidden");
-      password.type == "password"
-        ? (password.type = "text")
-        : (password.type = "password");
+      passClaslistToggle(hiddenPassBtn, showPassBtn, password);
     });
 
     showPassBtn.addEventListener("click", (e) => {
-      hiddenPassBtn.classList.toggle("hidden");
-      showPassBtn.classList.toggle("hidden");
-      password.type == "password"
-        ? (password.type = "text")
-        : (password.type = "password");
+      passClaslistToggle(hiddenPassBtn, showPassBtn, password);
     });
   </script>
 </html>
