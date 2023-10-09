@@ -38,6 +38,19 @@
       .no-scrollbar::-webkit-scrollbar {
         display: none;
       }
+
+      input[type="range"] {
+        background: none;
+      }
+
+      input[type="range"]::-webkit-slider-thumb {
+        height: 27px;
+        width: 27px;
+        border-radius: 50%;
+        pointer-events: auto;
+        -webkit-appearance: none;
+        background-color: #f5f6f8;
+      }
     </style>
     <title>Product</title>
   </head>
@@ -85,7 +98,7 @@
         </a>
         <a
           href="#"
-          class="text-dark text-sm font-medium py-3 px-[18px] bg-primary hover:bg-[#db8625] rounded-md hidden lg:block active:ring active:ring-orange-300"
+          class="text-dark text-sm font-medium py-3 px-[18px] bg-primary hover:bg-amber-600 rounded-md hidden lg:block active:ring active:ring-orange-300"
         >
           Sign Up
         </a>
@@ -229,7 +242,7 @@
           <span class="text-[18px] font-bold">Reset Filter</span>
         </div>
         <div class="flex flex-col gap-y-3.5">
-          <span>Search</span>
+          <span class="text-lg font-bold">Search</span>
           <input
             type="text"
             placeholder="Search Your Product"
@@ -252,7 +265,6 @@
               <input
                 type="checkbox"
                 id="coffee"
-                checked
                 class="appearance-none w-[24px] h-[24px] bg-none border border-[#a0a3bd] rounded-lg flex items-center justify-center after:font-awesome after:content-['\f00c'] after:font-black after:text-normal after:text-[#0b0909] after:hidden checked:bg-primary checked:border-none checked:after:block"
               />
               <label for="coffee">Coffee</label>
@@ -261,7 +273,6 @@
               <input
                 type="checkbox"
                 id="non-coffee"
-                checked
                 class="appearance-none w-[24px] h-[24px] bg-none border border-[#a0a3bd] rounded-lg flex items-center justify-center after:font-awesome after:content-['\f00c'] after:font-black after:text-normal after:text-[#0b0909] after:hidden checked:bg-primary checked:border-none checked:after:block"
               />
               <label for="non-coffee">Non Coffee</label>
@@ -270,7 +281,6 @@
               <input
                 type="checkbox"
                 id="foods"
-                checked
                 class="appearance-none w-[24px] h-[24px] bg-none border border-[#a0a3bd] rounded-lg flex items-center justify-center after:font-awesome after:content-['\f00c'] after:font-black after:text-normal after:text-[#0b0909] after:hidden checked:bg-primary checked:border-none checked:after:block"
               />
               <label for="foods">Foods</label>
@@ -279,7 +289,6 @@
               <input
                 type="checkbox"
                 id="add-on"
-                checked
                 class="appearance-none w-[24px] h-[24px] bg-none border border-[#a0a3bd] rounded-lg flex items-center justify-center after:font-awesome after:content-['\f00c'] after:font-black after:text-normal after:text-[#0b0909] after:hidden checked:bg-primary checked:border-none checked:after:block"
               />
               <label for="add-on">Add-On</label>
@@ -302,7 +311,6 @@
               <input
                 type="checkbox"
                 id="flashsale"
-                checked
                 class="appearance-none w-[24px] h-[24px] bg-none border border-[#a0a3bd] rounded-lg flex items-center justify-center after:font-awesome after:content-['\f00c'] after:font-black after:text-normal after:text-[#0b0909] after:hidden checked:bg-primary checked:border-none checked:after:block"
               />
               <label for="flashsale">Flash sale</label>
@@ -311,7 +319,6 @@
               <input
                 type="checkbox"
                 id="birthday-package"
-                checked
                 class="appearance-none w-[24px] h-[24px] bg-none border border-[#a0a3bd] rounded-lg flex items-center justify-center after:font-awesome after:content-['\f00c'] after:font-black after:text-normal after:text-[#0b0909] after:hidden checked:bg-primary checked:border-none checked:after:block"
               />
               <label for="birthday-package">Birthday Package</label>
@@ -320,7 +327,6 @@
               <input
                 type="checkbox"
                 id="cheap"
-                checked
                 class="appearance-none w-[24px] h-[24px] bg-none border border-[#a0a3bd] rounded-lg flex items-center justify-center after:font-awesome after:content-['\f00c'] after:font-black after:text-normal after:text-[#0b0909] after:hidden checked:bg-primary checked:border-none checked:after:block"
               />
               <label for="cheap">Cheap</label>
@@ -329,15 +335,31 @@
         </div>
         <div class="range">
           <span>Range Price</span>
-          <div class="slider">
-            <div class="progress"></div>
+          <div class="h-2 bg-light rounded mt-5">
+            <div
+              class="h-2 absolute left-[18%] right-[70%] rounded bg-primary"
+            ></div>
           </div>
-          <div class="range-input">
-            <input type="range" class="range-min" min="0" max="10000" />
-            <input type="range" class="range-max" min="10000" max="20000" />
+          <div class="relative">
+            <input
+              type="range"
+              class="w-full h-[8px] pointer-events-none absolute top-[-8px] appearance-none rounded"
+              min="0"
+              max="10000"
+            />
+            <input
+              type="range"
+              class="w-full h-[8px] pointer-events-none absolute top-[-8px] appearance-none rounded"
+              min="10000"
+              max="20000"
+            />
           </div>
         </div>
-        <div class="button-apply"><button>Apply Filter</button></div>
+        <div
+          class="text-sm font-medium text-[#0B0909] py-3 px-4 bg-primary text-center rounded-md hover:bg-amber-600 active:ring active:ring-orange-300 mt-4"
+        >
+          <button>Apply Filter</button>
+        </div>
       </section>
     </main>
     <!-- <main
