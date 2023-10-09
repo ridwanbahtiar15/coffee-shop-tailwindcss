@@ -234,13 +234,13 @@
             class="w-full h-full"
           />
         </div>
-        <div class="">
+        <button onclick="showFilterModal()">
           <img
             src="assets/img/sorting-menu.svg"
             alt="sorting-menu"
             class="w-full h-full"
           />
-        </div>
+        </button>
       </div>
       <section
         class="w-2/6 hidden lg:flex flex-col h-full gap-y-4 bg-[#0B0909] text-light py-[34px] px-[30px] rounded-2xl"
@@ -717,6 +717,144 @@
         </div>
       </section>
     </footer>
+
+    <!-- filter modal -->
+    <div
+      class="bg-gray-200 justify-center items-center h-screen select-none opacity-0 duration-200 transition-opacity hidden lg:hidden"
+      id="filterModal"
+    >
+      <div
+        class="fixed left-0 top-0 bg-black bg-opacity-50 w-screen h-screen flex justify-center items-center px-[10px] md:px-24"
+      >
+        <section
+          class="w-full flex flex-col gap-y-4 bg-[#0B0909] text-light py-[34px] px-[30px] rounded-2xl"
+        >
+          <div class="flex justify-between">
+            <span class="text-lg font-semibold">Filter</span>
+            <span class="text-base font-bold">Reset Filter</span>
+          </div>
+          <div class="flex flex-col gap-y-4">
+            <span class="text-base font-bold">Category</span>
+            <div class="flex flex-col gap-y-4 text-base font-normal">
+              <div class="flex gap-3.5 items-center">
+                <input
+                  type="checkbox"
+                  id="favorite-product"
+                  checked
+                  class="appearance-none w-[24px] h-[24px] bg-none border border-[#a0a3bd] rounded-lg flex items-center justify-center after:font-awesome after:content-['\f00c'] after:font-black after:text-normal after:text-[#0b0909] after:hidden checked:bg-primary checked:border-none checked:after:block"
+                />
+                <label for="favorite-product">Favorite Product</label>
+              </div>
+              <div class="flex gap-3.5 items-center">
+                <input
+                  type="checkbox"
+                  id="coffee"
+                  class="appearance-none w-[24px] h-[24px] bg-none border border-[#a0a3bd] rounded-lg flex items-center justify-center after:font-awesome after:content-['\f00c'] after:font-black after:text-normal after:text-[#0b0909] after:hidden checked:bg-primary checked:border-none checked:after:block"
+                />
+                <label for="coffee">Coffee</label>
+              </div>
+              <div class="flex gap-3.5 items-center">
+                <input
+                  type="checkbox"
+                  id="non-coffee"
+                  class="appearance-none w-[24px] h-[24px] bg-none border border-[#a0a3bd] rounded-lg flex items-center justify-center after:font-awesome after:content-['\f00c'] after:font-black after:text-normal after:text-[#0b0909] after:hidden checked:bg-primary checked:border-none checked:after:block"
+                />
+                <label for="non-coffee">Non Coffee</label>
+              </div>
+              <div class="flex gap-3.5 items-center">
+                <input
+                  type="checkbox"
+                  id="foods"
+                  class="appearance-none w-[24px] h-[24px] bg-none border border-[#a0a3bd] rounded-lg flex items-center justify-center after:font-awesome after:content-['\f00c'] after:font-black after:text-normal after:text-[#0b0909] after:hidden checked:bg-primary checked:border-none checked:after:block"
+                />
+                <label for="foods">Foods</label>
+              </div>
+              <div class="flex gap-3.5 items-center">
+                <input
+                  type="checkbox"
+                  id="add-on"
+                  class="appearance-none w-[24px] h-[24px] bg-none border border-[#a0a3bd] rounded-lg flex items-center justify-center after:font-awesome after:content-['\f00c'] after:font-black after:text-normal after:text-[#0b0909] after:hidden checked:bg-primary checked:border-none checked:after:block"
+                />
+                <label for="add-on">Add-On</label>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-y-4">
+            <span class="text-base font-bold">Sort By</span>
+            <div class="flex flex-col gap-y-4 text-lg font-normal">
+              <div class="flex gap-3.5 items-center">
+                <input
+                  type="checkbox"
+                  id="buy-one-get-one"
+                  checked
+                  class="appearance-none w-[24px] h-[24px] bg-none border border-[#a0a3bd] rounded-lg flex items-center justify-center after:font-awesome after:content-['\f00c'] after:font-black after:text-normal after:text-[#0b0909] after:hidden checked:bg-primary checked:border-none checked:after:block"
+                />
+                <label for="buy-one-get-one">Buy 1 get 1</label>
+              </div>
+              <div class="flex gap-3.5 items-center">
+                <input
+                  type="checkbox"
+                  id="flashsale"
+                  class="appearance-none w-[24px] h-[24px] bg-none border border-[#a0a3bd] rounded-lg flex items-center justify-center after:font-awesome after:content-['\f00c'] after:font-black after:text-normal after:text-[#0b0909] after:hidden checked:bg-primary checked:border-none checked:after:block"
+                />
+                <label for="flashsale">Flash sale</label>
+              </div>
+              <div class="flex gap-3.5 items-center">
+                <input
+                  type="checkbox"
+                  id="birthday-package"
+                  class="appearance-none w-[24px] h-[24px] bg-none border border-[#a0a3bd] rounded-lg flex items-center justify-center after:font-awesome after:content-['\f00c'] after:font-black after:text-normal after:text-[#0b0909] after:hidden checked:bg-primary checked:border-none checked:after:block"
+                />
+                <label for="birthday-package">Birthday Package</label>
+              </div>
+              <div class="flex gap-3.5 items-center">
+                <input
+                  type="checkbox"
+                  id="cheap"
+                  class="appearance-none w-[24px] h-[24px] bg-none border border-[#a0a3bd] rounded-lg flex items-center justify-center after:font-awesome after:content-['\f00c'] after:font-black after:text-normal after:text-[#0b0909] after:hidden checked:bg-primary checked:border-none checked:after:block"
+                />
+                <label for="cheap">Cheap</label>
+              </div>
+            </div>
+          </div>
+          <div class="range">
+            <span class="text-base font-bold">Range Price</span>
+            <div class="h-2 bg-light rounded mt-5">
+              <div
+                class="h-2 absolute left-[35%] right-[35%] rounded bg-primary"
+              ></div>
+            </div>
+            <div class="relative">
+              <input
+                type="range"
+                class="w-full h-[8px] pointer-events-none absolute top-[-8px] appearance-none rounded"
+                min="0"
+                max="10000"
+              />
+              <input
+                type="range"
+                class="w-full h-[8px] pointer-events-none absolute top-[-8px] appearance-none rounded"
+                min="10000"
+                max="20000"
+              />
+            </div>
+          </div>
+          <div class="flex gap-x-6 justify-center mt-6">
+            <button
+              class="p-[10px] bg-primary hover:bg-amber-600 rounded-md text-dark text-base font-medium active:ring active:ring-orange-300 w-1/2"
+            >
+              Apply Filter
+            </button>
+            <button
+              class="p-[10px] bg-light border-2 hover:bg-slate-200 rounded-md text-dark text-base font-medium active:ring active:ring-slate-300 w-1/2"
+              onclick="cancelFilterModal()"
+            >
+              Cancel
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
   </body>
   <script>
     // dropdown mobile
@@ -742,6 +880,25 @@
     const arrowRightBtn = () => {
       scrollCard.style.scrollBehavior = "smooth";
       scrollCard.scrollLeft += 900;
+    };
+
+    // filter modal
+    const filterClassToggle = () => {
+      const filterModal = document.getElementById("filterModal");
+      filterModal.classList.toggle("flex");
+      filterModal.classList.toggle("hidden");
+    };
+
+    const showFilterModal = () => {
+      filterClassToggle();
+      setTimeout(() => {
+        filterModal.classList.toggle("opacity-100");
+      }, 20);
+    };
+
+    const cancelFilterModal = () => {
+      filterClassToggle();
+      filterModal.classList.toggle("opacity-100");
     };
   </script>
 </html>
