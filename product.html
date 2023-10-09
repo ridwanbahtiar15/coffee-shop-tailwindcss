@@ -22,6 +22,7 @@
             fontFamily: {
               plusJakartaSans: ["Plus Jakarta Sans"],
               rubik: ["Rubik"],
+              awesome: ['"Font Awesome 6 Free"'],
             },
             colors: {
               primary: "#FF8906",
@@ -33,6 +34,11 @@
         },
       };
     </script>
+    <style>
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
     <title>Product</title>
   </head>
   <body>
@@ -52,7 +58,7 @@
         >
         <a
           href="/product"
-          class="text-light hover:border-b-2 hover:border-primary focus:border-b-2 focus:border-primary hidden lg:block"
+          class="text-light hover:border-b-2 border-b-2 border-primary hover:border-primary focus:border-b-2 focus:border-primary hidden lg:block"
           >Product</a
         >
       </div>
@@ -116,7 +122,7 @@
       </ul>
     </nav>
     <header
-      class="w-full h-[305px] bg-[url('/assets/img/Rectangle299.webp')] flex items-center lg:px-[130px]"
+      class="hidden md:w-full md:h-[305px] md:bg-[url('/assets/img/Rectangle299.webp')] md:flex md:items-center md:px-24 lg:px-[130px]"
     >
       <h1
         class="font-plusJakartaSans text-5xl font-medium w-[80%] text-light leading-tight"
@@ -124,6 +130,216 @@
         We Provide Good Coffee and Healthy Meals
       </h1>
     </header>
+    <section>
+      <div
+        class="font-plusJakartaSans py-6 px-5 md:pt-12 md:pb-6 md:px-24 lg:px-[127px] flex justify-between items-center"
+      >
+        <h1 class="text-2xl md:text-5xl font-medium text-[#0B0909]">
+          Today <span class="text-[#8E6447]">Promo</span>
+        </h1>
+        <div class="hidden md:flex gap-x-3">
+          <button type="button">
+            <img
+              src="assets/img/arrow-left-grey.svg"
+              alt="arrow-left"
+              class="w-full h-full"
+            />
+          </button>
+          <button type="button">
+            <img
+              src="assets/img/arrow-right-2.svg"
+              alt="arrow-right"
+              class="w-full h-full"
+            />
+          </button>
+        </div>
+      </div>
+      <div
+        class="w-full md:pt-6 md:pb-8 flex gap-x-12 overflow-x-scroll no-scrollbar"
+      >
+        <img
+          src="assets/img/promo-card1.webp"
+          alt="promo-card1"
+          class="w-full h-full"
+        />
+        <img
+          src="assets/img/promo-card1.webp"
+          alt="promo-card1"
+          class="w-full h-full"
+        />
+        <img
+          src="assets/img/promo-card1.webp"
+          alt="promo-card1"
+          class="w-full h-full"
+        />
+        <img
+          src="assets/img/promo-card2.webp"
+          alt="promo-card2"
+          class="w-full h-full"
+        />
+        <img
+          src="assets/img/promo-card2.webp"
+          alt="promo-card2"
+          class="w-full h-full"
+        />
+        <img
+          src="assets/img/promo-card1.webp"
+          alt="promo-card1"
+          class="w-full h-full"
+        />
+      </div>
+      <div class="pt-8 px-5 md:px-24 lg:px-[127px]">
+        <img src="assets/img/paginate.svg" alt="paginate" />
+      </div>
+    </section>
+    <section
+      class="font-plusJakartaSans py-6 px-5 md:pt-12 md:pb-6 md:px-24 lg:px-[127px]"
+    >
+      <h1 class="text-2xl md:text-5xl font-medium text-[#0B0909]">
+        Our <span class="text-[#8E6447]">Product</span>
+      </h1>
+    </section>
+    <main class="font-plusJakartaSans px-5 md:pb-6 md:px-24 lg:px-[127px]">
+      <div class="flex justify-between items-center relative lg:hidden">
+        <input
+          type="text"
+          placeholder="Find Product"
+          class="w-[80%] border border-[#DEDEDE] rounded-md py-3.5 px-10 text-xs text-[#4F5665] font-normal tracking-wider outline-none focus:border focus:border-primary"
+        />
+        <div class="absolute top-3.5 left-9 md:top-[62px] md:left-28">
+          <img
+            src="assets/img/Search-product.svg"
+            alt="Search-product"
+            class="w-full h-full"
+          />
+        </div>
+        <div class="">
+          <img
+            src="assets/img/sorting-menu.svg"
+            alt="sorting-menu"
+            class="w-full h-full"
+          />
+        </div>
+      </div>
+      <section
+        class="w-2/5 flex flex-col gap-y-4 bg-[#0B0909] text-light py-[34px] px-[30px] rounded-2xl"
+      >
+        <div class="flex justify-between">
+          <span class="text-[22px] font-semibold">Filter</span>
+          <span class="text-[18px] font-bold">Reset Filter</span>
+        </div>
+        <div class="flex flex-col gap-y-3.5">
+          <span>Search</span>
+          <input
+            type="text"
+            placeholder="Search Your Product"
+            class="py-4 px-5 text-normal font-normal text-[#696F79] rounded tracking-wider outline-none"
+          />
+        </div>
+        <div class="flex flex-col gap-y-4">
+          <span class="text-lg font-bold">Category</span>
+          <div class="flex flex-col gap-y-4 text-lg font-normal">
+            <div class="flex gap-3.5 items-center">
+              <input
+                type="checkbox"
+                id="favorite-product"
+                checked
+                class="appearance-none w-[24px] h-[24px] bg-none border border-[#a0a3bd] rounded-lg flex items-center justify-center after:font-awesome after:content-['\f00c'] after:font-black after:text-normal after:text-[#0b0909] after:hidden checked:bg-primary checked:border-none checked:after:block"
+              />
+              <label for="favorite-product">Favorite Product</label>
+            </div>
+            <div class="flex gap-3.5 items-center">
+              <input
+                type="checkbox"
+                id="coffee"
+                checked
+                class="appearance-none w-[24px] h-[24px] bg-none border border-[#a0a3bd] rounded-lg flex items-center justify-center after:font-awesome after:content-['\f00c'] after:font-black after:text-normal after:text-[#0b0909] after:hidden checked:bg-primary checked:border-none checked:after:block"
+              />
+              <label for="coffee">Coffee</label>
+            </div>
+            <div class="flex gap-3.5 items-center">
+              <input
+                type="checkbox"
+                id="non-coffee"
+                checked
+                class="appearance-none w-[24px] h-[24px] bg-none border border-[#a0a3bd] rounded-lg flex items-center justify-center after:font-awesome after:content-['\f00c'] after:font-black after:text-normal after:text-[#0b0909] after:hidden checked:bg-primary checked:border-none checked:after:block"
+              />
+              <label for="non-coffee">Non Coffee</label>
+            </div>
+            <div class="flex gap-3.5 items-center">
+              <input
+                type="checkbox"
+                id="foods"
+                checked
+                class="appearance-none w-[24px] h-[24px] bg-none border border-[#a0a3bd] rounded-lg flex items-center justify-center after:font-awesome after:content-['\f00c'] after:font-black after:text-normal after:text-[#0b0909] after:hidden checked:bg-primary checked:border-none checked:after:block"
+              />
+              <label for="foods">Foods</label>
+            </div>
+            <div class="flex gap-3.5 items-center">
+              <input
+                type="checkbox"
+                id="add-on"
+                checked
+                class="appearance-none w-[24px] h-[24px] bg-none border border-[#a0a3bd] rounded-lg flex items-center justify-center after:font-awesome after:content-['\f00c'] after:font-black after:text-normal after:text-[#0b0909] after:hidden checked:bg-primary checked:border-none checked:after:block"
+              />
+              <label for="add-on">Add-On</label>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-y-4">
+          <span class="text-lg font-bold">Sort By</span>
+          <div class="flex flex-col gap-y-4 text-lg font-normal">
+            <div class="flex gap-3.5 items-center">
+              <input
+                type="checkbox"
+                id="buy-one-get-one"
+                checked
+                class="appearance-none w-[24px] h-[24px] bg-none border border-[#a0a3bd] rounded-lg flex items-center justify-center after:font-awesome after:content-['\f00c'] after:font-black after:text-normal after:text-[#0b0909] after:hidden checked:bg-primary checked:border-none checked:after:block"
+              />
+              <label for="buy-one-get-one">Buy 1 get 1</label>
+            </div>
+            <div class="flex gap-3.5 items-center">
+              <input
+                type="checkbox"
+                id="flashsale"
+                checked
+                class="appearance-none w-[24px] h-[24px] bg-none border border-[#a0a3bd] rounded-lg flex items-center justify-center after:font-awesome after:content-['\f00c'] after:font-black after:text-normal after:text-[#0b0909] after:hidden checked:bg-primary checked:border-none checked:after:block"
+              />
+              <label for="flashsale">Flash sale</label>
+            </div>
+            <div class="flex gap-3.5 items-center">
+              <input
+                type="checkbox"
+                id="birthday-package"
+                checked
+                class="appearance-none w-[24px] h-[24px] bg-none border border-[#a0a3bd] rounded-lg flex items-center justify-center after:font-awesome after:content-['\f00c'] after:font-black after:text-normal after:text-[#0b0909] after:hidden checked:bg-primary checked:border-none checked:after:block"
+              />
+              <label for="birthday-package">Birthday Package</label>
+            </div>
+            <div class="flex gap-3.5 items-center">
+              <input
+                type="checkbox"
+                id="cheap"
+                checked
+                class="appearance-none w-[24px] h-[24px] bg-none border border-[#a0a3bd] rounded-lg flex items-center justify-center after:font-awesome after:content-['\f00c'] after:font-black after:text-normal after:text-[#0b0909] after:hidden checked:bg-primary checked:border-none checked:after:block"
+              />
+              <label for="cheap">Cheap</label>
+            </div>
+          </div>
+        </div>
+        <div class="range">
+          <span>Range Price</span>
+          <div class="slider">
+            <div class="progress"></div>
+          </div>
+          <div class="range-input">
+            <input type="range" class="range-min" min="0" max="10000" />
+            <input type="range" class="range-max" min="10000" max="20000" />
+          </div>
+        </div>
+        <div class="button-apply"><button>Apply Filter</button></div>
+      </section>
+    </main>
     <!-- <main
       class="font-plusJakartaSans px-5 md:px-24 lg:px-[130px] flex flex-col gap-y-5 lg:flex-row lg:gap-x-5"
     >
@@ -280,7 +496,7 @@
         </form>
       </section>
     </main> -->
-    <footer
+    <!-- <footer
       class="font-plusJakartaSans p-5 mt-5 flex flex-wrap gap-y-8 sm:px-5 md:px-24 pt md:pt-10 md:pb-20 md:mt-10 lg:px-[130px]"
     >
       <section
@@ -337,7 +553,7 @@
           </div>
         </div>
       </section>
-    </footer>
+    </footer> -->
   </body>
   <script>
     const burgerMenu = document.getElementById("burger-menu");
