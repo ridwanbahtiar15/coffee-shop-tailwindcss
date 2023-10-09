@@ -38,21 +38,23 @@
       };
     </script>
     <style>
-      .no-scrollbar::-webkit-scrollbar {
-        display: none;
-      }
+      @layer utilities {
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
 
-      input[type="range"] {
-        background: none;
-      }
+        input[type="range"] {
+          background: none;
+        }
 
-      input[type="range"]::-webkit-slider-thumb {
-        height: 27px;
-        width: 27px;
-        border-radius: 50%;
-        pointer-events: auto;
-        -webkit-appearance: none;
-        background-color: #f5f6f8;
+        input[type="range"]::-webkit-slider-thumb {
+          height: 27px;
+          width: 27px;
+          border-radius: 50%;
+          pointer-events: auto;
+          -webkit-appearance: none;
+          background-color: #f5f6f8;
+        }
       }
     </style>
     <title>Product</title>
@@ -340,7 +342,7 @@
           </div>
         </div>
         <div class="range">
-          <span>Range Price</span>
+          <span class="text-lg font-bold">Range Price</span>
           <div class="h-2 bg-light rounded mt-5">
             <div
               class="h-2 absolute left-[18%] right-[70%] rounded bg-primary"
