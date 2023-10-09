@@ -354,6 +354,7 @@
           </div>
           <button
             class="p-[10px] text-sm font-medium rounded-md text-dark bg-primary hover:bg-amber-600 active:ring active:ring-orange-300"
+            onclick="showCheckoutModal()"
           >
             Checkout
           </button>
@@ -493,6 +494,37 @@
         </div>
       </div>
     </div>
+
+    <!-- checkout modal -->
+    <div
+      class="bg-gray-200 justify-center items-center h-screen select-none opacity-0 duration-200 transition-opacity hidden"
+      id="checkoutModal"
+    >
+      <div
+        class="fixed left-0 top-0 bg-black bg-opacity-50 w-screen h-screen flex justify-center items-center px-[10px] md:px-0"
+      >
+        <div
+          class="bg-white rounded shadow-md p-8 w-full flex justify-center items-center flex-col gap-y-8 md:w-[50%] lg:w-[30%]"
+        >
+          <h1 class="text-xl font-medium text-dark text-center">
+            Are you sure Checkout this order?
+          </h1>
+          <div class="flex gap-x-6">
+            <button
+              class="p-[10px] bg-primary hover:bg-amber-600 rounded-md text-dark text-base font-medium active:ring active:ring-orange-300"
+            >
+              Confirm
+            </button>
+            <button
+              class="p-[10px] bg-light border-2 hover:bg-slate-200 rounded-md text-dark text-base font-medium active:ring active:ring-slate-300"
+              onclick="cancelCheckoutModal()"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
   <script>
     // dropdown
@@ -525,6 +557,25 @@
     const cancelLogoutModal = () => {
       logoutClassToggle();
       logoutModal.classList.toggle("opacity-100");
+    };
+
+    // checkout modal
+    const checkoutClassToggle = () => {
+      const checkoutModal = document.getElementById("checkoutModal");
+      checkoutModal.classList.toggle("flex");
+      checkoutModal.classList.toggle("hidden");
+    };
+
+    const showCheckoutModal = () => {
+      checkoutClassToggle();
+      setTimeout(() => {
+        checkoutModal.classList.toggle("opacity-100");
+      }, 20);
+    };
+
+    const cancelCheckoutModal = () => {
+      checkoutClassToggle();
+      checkoutModal.classList.toggle("opacity-100");
     };
   </script>
 </html>
