@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Archivo&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Rubik&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <script>
       tailwind.config = {
         theme: {
@@ -29,15 +33,12 @@
         },
       };
     </script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
+
     <title>Chekout Product</title>
   </head>
   <body>
     <nav
-      class="w-full flex justify-between py-4 px-5 items-center font-plusJakartaSans bg-[#0B0909] sm:px-5 md:px-24 lg:px-[130px]"
+      class="w-full flex justify-between py-4 px-5 items-center font-plusJakartaSans bg-[#0B0909] md:px-24 lg:px-[130px]"
     >
       <div class="nav-start flex items-center gap-x-[60px] text-sm font-normal">
         <div>
@@ -115,20 +116,22 @@
       </div>
     </nav>
 
-    <header class="pt-10 pb-7 px-5 md:px-24 lg:px-[130px]">
-      <h1 class="text-2xl font-medium text-dark lg:text-5xl">
+    <header
+      class="font-plusJakartaSans py-8 px-5 md:px-24 lg:py-10 lg:px-[130px] min-[1400px]:pt-[78px] min-[1400px]:pb-[64px]"
+    >
+      <h1 class="text-2xl font-medium text-dark md:text-3xl lg:text-5xl">
         Payment Details
       </h1>
     </header>
     <main
-      class="font-plusJakartaSans px-5 flex flex-col gap-y-12 sm:px-5 md:px-24 lg:px-[130px] lg:flex-row lg:gap-x-5"
+      class="font-plusJakartaSans px-5 flex flex-col gap-y-12 md:px-24 lg:px-[130px] lg:flex-row lg:gap-x-5"
     >
       <section class="lg:w-2/3">
         <div class="mb-8">
           <header class="flex justify-between items-center mb-4">
-            <span class="text-xl text-dark font-medium lg:text-[22px]"
-              >Your Order</span
-            >
+            <h2 class="text-xl text-dark font-medium lg:text-[22px]">
+              Your Order
+            </h2>
             <a
               href="#"
               class="p-[10px] bg-primary hover:bg-amber-600 rounded-md text-dark text-sm font-medium active:ring active:ring-orange-300"
@@ -137,37 +140,39 @@
           </header>
           <div class="section-body flex flex-col gap-y-4">
             <div
-              class="item-product bg-[#E8E8E84D] flex items-center p-[10px] gap-x-7"
+              class="item-product bg-[#E8E8E84D] flex flex-col gap-y-4 p-4 relative sm:flex-row sm:gap-x-4 sm:items-center"
             >
-              <img
-                src="assets/img/image31.webp"
-                alt="coffee"
-                class="w-16 h-16 md:w-[280px] md:h-[268px] lg:w-44 lg:h-44 hidden min-[375px]:block"
-              />
+              <div class="w-[80%] h-[80%] sm:w-[60%] sm:h-[60%] lg:w-1/3">
+                <img
+                  src="assets/img/image31.webp"
+                  alt="coffee"
+                  class="w-full h-full"
+                />
+              </div>
               <div
-                class="product-info flex flex-col items-start gap-y-4 flex-1"
+                class="product-info flex flex-col items-start gap-y-4 lg:w-2/3"
               >
-                <span
+                <p
                   class="text-xs text-light bg-[#D00000] p-[10px] rounded-full font-bold"
-                  >FLASH SALE!</span
                 >
-                <span class="text-lg text-[#0B0909] font-bold"
-                  >Hazelnut Latte</span
+                  FLASH SALE!
+                </p>
+                <p class="text-lg text-[#0B0909] font-bold">Hazelnut Latte</p>
+                <div
+                  class="text-sm text-secondary font-normal md:text-lg lg:text-base xl:text-lg flex"
                 >
-                <span class="text-sm text-secondary font-normal lg:text-lg"
-                  >2pcs | Regular | Ice | DineIn</span
-                >
-                <div class="flex gap-x-3 items-center">
-                  <span class="text-xs text-[#D00000] font-medium line-through"
-                    >IDR40.000</span
-                  >
-                  <span
-                    class="text-lg text-[#0B0909] font-medium lg:text-[22px]"
-                    >IDR20.000</span
-                  >
+                  <p>2pcs | Regular | Ice | DineIn</p>
+                </div>
+                <div class="flex gap-x-4 items-center">
+                  <p class="text-xs text-[#D00000] font-medium line-through">
+                    IDR40.000
+                  </p>
+                  <p class="text-lg text-[#0B0909] font-medium lg:text-[22px]">
+                    IDR20.000
+                  </p>
                 </div>
               </div>
-              <button type="button">
+              <button type="button" class="absolute top-3 right-3">
                 <img
                   src="assets/img/XCircle.svg"
                   alt="XCircle"
@@ -176,37 +181,39 @@
               </button>
             </div>
             <div
-              class="item-product bg-[#E8E8E84D] flex items-center p-[10px] gap-x-7"
+              class="item-product bg-[#E8E8E84D] flex flex-col gap-y-4 p-4 relative sm:flex-row sm:gap-x-4 sm:items-center"
             >
-              <img
-                src="assets/img/image31.webp"
-                alt="coffee"
-                class="w-16 h-16 md:w-[280px] md:h-[268px] lg:w-44 lg:h-44 hidden min-[375px]:block"
-              />
+              <div class="w-[80%] h-[80%] sm:w-[60%] sm:h-[60%] lg:w-1/3">
+                <img
+                  src="assets/img/image31.webp"
+                  alt="coffee"
+                  class="w-full h-full"
+                />
+              </div>
               <div
-                class="product-info flex flex-col items-start gap-y-4 flex-1"
+                class="product-info flex flex-col items-start gap-y-4 lg:w-2/3"
               >
-                <span
+                <p
                   class="text-xs text-light bg-[#D00000] p-[10px] rounded-full font-bold"
-                  >FLASH SALE!</span
                 >
-                <span class="text-lg text-[#0B0909] font-bold"
-                  >Hazelnut Latte</span
+                  FLASH SALE!
+                </p>
+                <p class="text-lg text-[#0B0909] font-bold">Hazelnut Latte</p>
+                <div
+                  class="text-sm text-secondary font-normal md:text-lg lg:text-base xl:text-lg flex"
                 >
-                <span class="text-sm text-secondary font-normal lg:text-lg"
-                  >2pcs | Regular | Ice | DineIn</span
-                >
-                <div class="flex gap-x-3 items-center">
-                  <span class="text-xs text-[#D00000] font-medium line-through"
-                    >IDR40.000</span
-                  >
-                  <span
-                    class="text-lg text-[#0B0909] font-medium lg:text-[22px]"
-                    >IDR20.000</span
-                  >
+                  <p>2pcs | Regular | Ice | DineIn</p>
+                </div>
+                <div class="flex gap-x-4 items-center">
+                  <p class="text-xs text-[#D00000] font-medium line-through">
+                    IDR40.000
+                  </p>
+                  <p class="text-lg text-[#0B0909] font-medium lg:text-[22px]">
+                    IDR20.000
+                  </p>
                 </div>
               </div>
-              <button type="button">
+              <button type="button" class="absolute top-3 right-3">
                 <img
                   src="assets/img/XCircle.svg"
                   alt="XCircle"
@@ -468,10 +475,10 @@
     <!-- dropdown mobile -->
     <nav
       id="dropdownMobile"
-      class="w-screen font-plusJakartaSans hidden lg:hidden transition duration-200 opacity-100"
+      class="w-screen font-plusJakartaSans hidden lg:hidden"
     >
       <div
-        class="fixed left-0 top-0 bg-[#0B0909] w-screen h-screen pt-4 px-5 md:px-0"
+        class="fixed left-0 top-0 bg-[#0B0909] w-screen h-screen pt-4 px-5 md:px-24 lg:px-[130px]"
       >
         <div class="mb-5 flex justify-between">
           <img
@@ -529,7 +536,7 @@
 
     <!-- logout modal -->
     <div
-      class="bg-gray-200 justify-center items-center h-screen opacity-0 duration-500 transition-opacity hidden absolute"
+      class="bg-gray-200 justify-center items-center h-screen opacity-0 duration-200 transition-opacity hidden absolute"
       id="logoutModal"
     >
       <div
@@ -602,10 +609,6 @@
       const dropdownMobile = document.getElementById("dropdownMobile");
       dropdownMobile.classList.toggle("flex");
       dropdownMobile.classList.toggle("hidden");
-
-      setTimeout(() => {
-        dropdownMobile.classList.toggle("opacity-100");
-      }, 20);
     };
 
     showDropdownMobile.addEventListener("click", () => {
@@ -621,15 +624,18 @@
       const logoutModal = document.getElementById("logoutModal");
       logoutModal.classList.toggle("flex");
       logoutModal.classList.toggle("hidden");
-      logoutModal.classList.toggle("opacity-100");
     };
 
     const showLogoutModal = () => {
       logoutClassToggle();
+      setTimeout(() => {
+        logoutModal.classList.toggle("opacity-100");
+      }, 20);
     };
 
     const cancelLogoutModal = () => {
       logoutClassToggle();
+      logoutModal.classList.toggle("opacity-100");
     };
 
     // checkout modal
