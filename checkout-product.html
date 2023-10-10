@@ -112,9 +112,6 @@
             class="w-full h-full"
           />
         </button>
-        <button class="hidden lg:hidden" id="hideDropdownMobile">
-          <i class="fa-solid fa-x" style="color: #ffffff"></i>
-        </button>
       </div>
     </nav>
 
@@ -471,19 +468,36 @@
     <!-- dropdown mobile -->
     <nav
       id="dropdownMobile"
-      class="w-screen font-plusJakartaSans hidden lg:hidden transition duration-500"
+      class="w-screen font-plusJakartaSans lg:hidden transition duration-200 opacity-100"
     >
       <div
-        class="fixed left-0 top-0 bg-[#0B0909] w-[80%] h-screen pt-4 px-5 md:px-0"
+        class="fixed left-0 top-0 bg-[#0B0909] w-screen h-screen pt-4 px-5 md:px-0"
       >
-        <div class="mb-5">
+        <div class="mb-5 flex justify-between">
           <img
             src="assets/img/coffee-shop-white.svg"
             alt="logo"
             class="w-32 h-8"
           />
+          <button class="lg:hidden" id="hideDropdownMobile">
+            <i class="fa-solid fa-x" style="color: #ffffff"></i>
+          </button>
         </div>
-        <ul class="flex flex-col gap-y-2">
+        <ul class="flex flex-col gap-y-2 w-full">
+          <li class="relative">
+            <input
+              type="text"
+              placeholder="Find Product"
+              class="w-full border-2 rounded-md py-3.5 px-10 text-xs text-[#4F5665] font-normal tracking-wider outline-none focus:border-2 focus:border-primary"
+            />
+            <div class="absolute top-3.5 left-4 md:top-3.5 md:left-4">
+              <img
+                src="assets/img/Search-product.svg"
+                alt="Search-product"
+                class="w-full h-full"
+              />
+            </div>
+          </li>
           <li
             class="p-1 text-light hover:bg-light hover:text-[#0B0909] hover:font-medium"
           >
@@ -585,11 +599,13 @@
     const hideDropdownMobile = document.getElementById("hideDropdownMobile");
 
     const dropdownMobileToggle = () => {
-      showDropdownMobile.classList.toggle("hidden");
-      hideDropdownMobile.classList.toggle("hidden");
       const dropdownMobile = document.getElementById("dropdownMobile");
-      dropdownMobile.classList.toggle("hidden");
       dropdownMobile.classList.toggle("flex");
+      dropdownMobile.classList.toggle("hidden");
+
+      setTimeout(() => {
+        dropdownMobile.classList.toggle("opacity-100");
+      }, 20);
     };
 
     showDropdownMobile.addEventListener("click", () => {
